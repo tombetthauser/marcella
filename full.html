@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Div</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        #full-screen-div {
+            height: 100vh; /* Full height of the viewport */
+            width: 100vw;  /* Full width of the viewport */
+            background-color: rgb(45, 54, 66); /* Example background color */
+            background-image: url('./images/101.jpg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="full-screen-div"></div>
+</body>
+<script>
+    const IMG_URLS = [
+        './images/101.jpg',
+        './images/102.jpg',
+        './images/103.jpg',
+        './images/IMG_7272.jpg',
+        './images/IMG_7273.jpg',
+        './images/IMG_7274.jpg',
+        './images/IMG_7275.jpg',
+        './images/IMG_7277.jpg',
+        './images/IMG_7278.jpg',
+        './images/IMG_7279.jpg',
+        './images/IMG_7280.jpg',
+        './images/IMG_7281.jpg',
+        './images/IMG_7282.jpg',
+        './images/IMG_7283.jpg',
+        './images/IMG_7284.jpg',
+        './images/IMG_7285.jpg',
+        './images/IMG_7286.jpg',
+        './images/IMG_7287.jpg',
+    ]
+
+    let currPageIdx = 0;
+
+    const primaryDiv = document.querySelector("#full-screen-div");
+
+    primaryDiv.addEventListener('click', () => {
+        // currPageIdx = (currPageIdx + 1) % IMG_URLS.length;
+        currPageIdx = currPageIdx + 1;
+        const newUrl = IMG_URLS[currPageIdx];
+        primaryDiv.style.backgroundImage = `url("${IMG_URLS[currPageIdx]}")`;
+        if (currPageIdx >= IMG_URLS.length) {
+            window.location.replace("./index.html")
+        }
+    })
+</script>
+</html>

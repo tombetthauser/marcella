@@ -11,15 +11,16 @@
         background-color: rgb(177, 120, 120);
     }
     body {
-        width: 80%;
+        width: 90%;
         margin: 8vw auto 25vw auto;
+        max-width: 750px;
     }
 
     img {
         width: 100%;
         margin-bottom: 8vw;
-        border-radius: 3vw;
-        border: 3.5vw solid rgb(45, 54, 66);
+        border-radius: 25px;
+        border: 15px solid rgb(45, 54, 66);
         box-sizing: border-box;
         background-color: rgb(31, 40, 51);
     }
@@ -39,30 +40,59 @@
     }
 
     h1 {
-        font-size: 6.5vw;
+        font-size: 50px;
         text-shadow: 3.5px 3.5px 3px rgb(45, 54, 66);
     }
 
     h3 {
-        font-size: 2vw;
+        font-size: calc(1vw + 20px);
         text-shadow: 2px 2px 2px rgb(45, 54, 66);
+        margin-top: 10px;
     }
 
     hr {
-        margin-top: 4vw;
-        margin-bottom: 10vw;
+        margin-top: 40px;
+        margin-bottom: 30px;
         color: rgb(231, 213, 213);
         /* box-shadow: 1px 1px 0 rgb(45, 54, 66); */
     }
+    
+    .full-screen-button {
+        margin-top: 0;
+        margin-bottom: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(231, 213, 213);
+        width: fit-content;
+        display: block;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: sans-serif;
+        color: rgb(177, 120, 120);
+    }
+
+    p {
+        color: rgb(231, 213, 213);
+        text-align: justify;
+        width: 85%;
+        display: block;
+        margin: auto auto 40px auto;
+        font-size: 14.5px;
+    }
 
     .small-title-span {
-        font-size: 5vw;
+        font-size: 45px;
     }
 </style>
 <body>
     <h1>Marcella <span class="small-title-span">and the</span> Moon</h1>
     <h3>by Laura Jane Coats 1986</h3>
     <hr>
+    <p>
+        &emsp;&emsp; In 1980's and 90's my mother wrote and illustrated children's books. She studied fine art at UC Davis in the 1970's and continued to practice painting while her career as an illustrater and graphic designer took her from her home town of Sacramento, CA to New York, San Francisco, Marin County and her final home deep in the forest outside Nevada City. She died unexpectedly in 2018 and left behind a legacy of art, inspiration and a joy for life that remains in all who knew her. Although her books are currently out of print most can be found for a reasonable price on ebay. Regardless I wanted to make them accessible for free digitally. I hope they can bring you as much joy as they have brought me and my family.
+    </p>
+    <a class="full-screen-button" href="./full.html">begin story</a>
     <div>
         <img class="cover" src="./images/101.jpg" alt="101.jpg">
         <img src="./images/102.jpg" alt="102.jpg">
